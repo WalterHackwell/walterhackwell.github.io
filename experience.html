@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+            position: relative;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: gray;
+        }
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            width: 50%;
+        }
+        .timeline-item:nth-child(odd) {
+            float: left;
+            text-align: right;
+            clear: both;
+        }
+        .timeline-item:nth-child(even) {
+            float: right;
+            text-align: left;
+            clear: both;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            top: 20px;
+            background: gray;
+            border-radius: 50%;
+        }
+        .timeline-item:nth-child(odd):before {
+            left: -5px;
+        }
+        .timeline-item:nth-child(even):before {
+            right: -5px;
+        }
+        .timeline-item h4, .timeline-item p {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Experience</h1>
+    </header>
+    <div class="container">
+
+        <div class="return-button">
+            <a href="index.html" class="btn return">Return to Main Page</a>
+        </div>
+
+        <ul class="timeline">
+            <li class="timeline-item">
+                <h4>Job Title 1</h4>
+                <p>Company 1, Year 1</p>
+            </li>
+            <li class="timeline-item">
+                <h4>Job Title 2</h4>
+                <p>Company 2, Year 2</p>
+            </li>
+            <!-- Add more timeline items here -->
+        </ul>
+    </div>
+</body>
+</html>
