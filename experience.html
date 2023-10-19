@@ -16,21 +16,22 @@
             padding: 1em;
             text-align: center;
         }
-        .container {
+        .main-container {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
             display: flex;
             justify-content: space-between;
         }
+        .left-section, .right-section {
+            width: 48%; /* Adjust the width as needed */
+        }
         .timeline {
             list-style-type: none;
             padding: 0;
-            width: 50%;
         }
         .timeline-item {
             padding: 20px;
-            position: relative;
         }
         .timeline-item h4, .timeline-item p {
             margin: 0;
@@ -45,7 +46,6 @@
         }
         .certification-section {
             margin-top: 30px;
-            width: 50%;
         }
         .certification-section h2 {
             font-size: 1.5em;
@@ -56,11 +56,11 @@
     <header>
         <h1>My Experience</h1>
     </header>
-    <div class="container">
-        <div class="return-button">
-            <a href="index.html" class="btn return">Return to Main Page</a>
-        </div>
-        
+    <div class="main-container">
+        <div class="left-section">
+            <div class="return-button">
+                <a href="index.html">Return to Main Page</a>
+            </div>
         <ul class="timeline">
             <li class="timeline-item">
                 <h4>CSR Agent</h4>
@@ -84,11 +84,13 @@
                 <p>Axians, September 2022 - Present</p>
             </li>
         </ul>
-
-        <div class="certification-section">
-            <h2>Certifications</h2>
-            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f9d80b57-8e10-4e0e-9ccf-5e388911f4e2" data-share-badge-host="https://www.credly.com"></div>
-            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+        <div class="right-section">
+            <div class="certification-section">
+                <h2>Certifications</h2>
+                <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f9d80b57-8e10-4e0e-9ccf-5e388911f4e2" data-share-badge-host="https://www.credly.com"></div>
+                <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+            </div>
         </div>
     </div>
 </body>
