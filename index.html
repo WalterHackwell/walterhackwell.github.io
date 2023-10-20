@@ -15,8 +15,8 @@
     </div>
     <nav id="main-nav">
       <button onclick="window.location.href='experience.html'">Experience</button>
-      <button onclick="window.location.href='https://www.linkedin.com/in/daveysprenger'" target="_blank">LinkedIn</button>
-      <button onclick="window.location.href='https://twitter.com/WalterHackwell'" target="_blank">Twitter</button>
+      <button onclick="window.location.href='https://www.linkedin.com/in/your-profile'" target="_blank">LinkedIn</button>
+      <button onclick="window.location.href='https://twitter.com/your-profile'" target="_blank">Twitter</button>
       <button onclick="window.location.href='links.html'">Links</button>
       <button onclick="window.location.href='notepad.html'">Browser Notepad</button>
     </nav>
@@ -24,19 +24,39 @@
 
   <main>
     <section id="intro">
-
-      <div id="centered-intro-container">
-        <p id="intro-text">
-          Hello! I'm Davey Sprenger, I'm a Security Analyst and Scriptkiddie. I am interested in digital forensics, malware analysis, privacy, networking, and security. Feel free to connect with me!
-        </p>
+      <div id="intro-container">
+        <h2>Hello! I'm Davey Sprenger,</h2>
+        <p>I'm a Security Analyst and Scriptkiddie. I am interested in digital forensics, malware analysis, privacy, networking, and security. Feel free to connect with me!</p>
       </div>
-
     </section>
-    <!-- ... -->
+    
+<!-- Contact Form -->
+<section id="contact-form">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+      </div>
+      
+      <input type="submit" value="Send" id="submit-button">
+    </form>
+  </section>
+  
   </main>
 
   <footer>
-    <p>© 2023 Sprenger. All rights reserved.</p>
+    <p>© 2023 Davey Sprenger. All rights reserved.</p>
   </footer>
 
 </body>
