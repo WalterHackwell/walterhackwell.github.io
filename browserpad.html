@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Browser Notepad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        #toolbar {
+            margin-bottom: 10px;
+        }
+        button {
+            margin: 5px;
+        }
+        #editor {
+            width: 100%;
+            height: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Browser Notepad</h1>
+
+    <div id="toolbar">
+        <button onclick="applyStyle('bold')">Bold</button>
+        <button onclick="applyStyle('italic')">Italic</button>
+        <select id="fontSize" onchange="applyStyle('fontsize')">
+            <option value="12">12</option>
+            <option value="16">16</option>
+            <option value="20">20</option>
+            <option value="24">24</option>
+        </select>
+    </div>
+
+    <div id="editor" contenteditable="true">
+        <!-- This is where you'll type your notes. -->
+    </div>
+
+    <script>
+        function applyStyle(style) {
+            if (style === 'bold') {
+                document.execCommand('bold', false, null);
+            } else if (style === 'italic') {
+                document.execCommand('italic', false, null);
+            } else if (style === 'fontsize') {
+                const size = document.getElementById("fontSize").value;
+                document.execCommand('fontSize', false, size/12);
+            }
+        }
+    </script>
+</body>
+</html>
