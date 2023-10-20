@@ -2,61 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sprenger - Home</title>
+  <title>Your Name - Experience</title>
   <link rel="stylesheet" href="styles.css">
-  <script defer src="script.js"></script>
 </head>
 <body>
 
   <header>
     <div id="header-content">
       <img src="doggo.png" alt="Profile Picture" id="profile-pic">
-      <h1>Sprenger</h1>
+      <h1>My Experience</h1>
     </div>
-    <nav id="main-nav">
-      <button onclick="window.location.href='experience.html'">Experience</button>
-      <button onclick="window.location.href='https://www.linkedin.com/in/your-profile'" target="_blank">LinkedIn</button>
-      <button onclick="window.location.href='https://twitter.com/your-profile'" target="_blank">Twitter</button>
-      <button onclick="window.location.href='links.html'">Links</button>
-      <button onclick="window.location.href='notepad.html'">Browser Notepad</button>
-    </nav>
   </header>
 
-  <main>
-    <section id="intro">
-      <div id="intro-container">
-        <h2>Hello! I'm Davey Sprenger,</h2>
-        <p>I'm a Security Analyst and Scriptkiddie. I am interested in digital forensics, malware analysis, privacy, networking, and security. Feel free to connect with me!</p>
+  <main id="experience-content">
+    <section id="jobs">
+      <h2>Job History</h2>
+      <div id="timeline">
+        <div class="job">
+          <h3>CSR Agent</h3>
+          <p>Conduent, January 2017 - August 2019</p>
+        </div>
+        <div class="job">
+          <h3>Webshop Management</h3>
+          <p>Pimm Solutions, September 2019 - February 2020</p>
+        </div>
+        <div class="job">
+          <h3>Minor Privacy Security & Risk</h3>
+          <p>Rotterdam University of Applied Sciences, September 2020 - February 2021</p>
+        </div>
+        <div class="job">
+          <h3>Security Consultant Intern</h3>
+          <p>Achmea, February 2021 - August 2021</p>
+        </div>
+        <div class="job">
+          <h3>SOC Analyst</h3>
+          <p>Axians, September 2022 - Present</p>
+        </div>
       </div>
     </section>
-    
-<!-- Contact Form -->
-<section id="contact-form">
-    <h2>Contact Me</h2>
-    <form id="contactForm">
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="subject">Subject:</label>
-        <input type="text" id="subject" name="subject" required>
-      </div>
-      
-      <div class="form-group">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-      
-      <input type="submit" value="Send" id="submit-button">
-    </form>
-  </section>
-  
+
+    <aside id="certifications">
+      <h2>Certifications</h2>
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="f9d80b57-8e10-4e0e-9ccf-5e388911f4e2" data-share-badge-host="https://www.credly.com"></div>
+      <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+    </aside>
   </main>
 
+  <button id="return-button" onclick="window.location.href='index.html'">Return to Main Page</button>
+
   <footer>
-    <p>© 2023 Davey Sprenger. All rights reserved.</p>
+    <!-- Footer content -->
   </footer>
 
 </body>
