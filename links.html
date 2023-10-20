@@ -1,89 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Informational Links</title>
-    <style>
-        /* General styling */
-        body, h1, h2, a {
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #f0f0f0;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em;
-            text-align: center;
-        }
-        /* Container */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 20px;
-        }
-        /* Link sections */
-        .link-section {
-            flex: 1;
-            margin: 10px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            background-color: white;
-        }
-        /* Styled links */
-        .styled-link {
-            display: block;
-            margin-bottom: 10px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            text-decoration: none;
-            color: black;
-        }
-        /* Profile picture */
-        #profile-picture {
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-        }
-        /* Return button */
-        .btn.return {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: blue;
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Links</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <img src="doggo.png" alt="Davey Sprenger" id="profile-picture">
-        <h1>Info links Links</h1>
-    </header>
-    <div class="container">
-        <div class="link-section" id="general">
-            <h2>General</h2>
-            <!-- Add your general links here -->
-        </div>
-        <div class="link-section" id="DFIR">
-            <h2>DFIR</h2>
-            <a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt4bdf4bdc6698936a/N2C_Field_Manual.pdf" class="styled-link">N2C Field Manual</a>
-            <a href="https://twitter.com/search?q=%23DFIRJobs" class="styled-link">#DFIRJobs on Twitter</a>
-            <a href="https://www.youtube.com/playlist?list=PLfouvuAjspTqyfrgYO76VOwvVqK1AsMwK" class="styled-link">DFIR YouTube Playlist</a>
-            <a href="https://www.13cubed.com/episodes/" class="styled-link">13Cubed Episodes</a>
-            <a href="https://cci.calpoly.edu/2019-digital-forensics-downloads" class="styled-link">CalPoly DFIR Downloads</a>
-            <a href="https://academy.cyber5w.com/" class="styled-link">Cyber5W Academy</a>
-            <a href="https://www.sans.org/cyberaces/" class="styled-link">SANS Cyber Aces</a>
-            <a href="https://www.youtube.com/playlist?list=PLJu2iQtpGvv-2LtysuTTka7dHt9GKUbxD" class="styled-link">DFIR YouTube Playlist 2</a>
-        </div>
+
+  <header>
+    <div id="header-content">
+      <img src="doggo.png" alt="Profile Picture" id="profile-pic">
+      <h1>Links</h1>
     </div>
-    <a href="index.html" class="btn return">Return to Main Page</a>
+  </header>
+
+  <main>
+    <div id="links-container">
+      <div class="link-category" id="general-info">
+        <h2>General Info</h2>
+        <a href="https://example.com" target="_blank">Example Link 1</a>
+        <!-- More links -->
+      </div>
+      <div class="link-category" id="digital-forensics">
+        <h2>Digital Forensics</h2>
+        <a href="https://example.com" target="_blank">Example Link 2</a>
+        <!-- More links -->
+      </div>
+      <!-- More categories -->
+      <div class="link-category" id="digital-forensics">
+        <h2>Digital Forensics</h2>
+        <a href="https://www.forensicfocus.com/articles/digital-forensics-resources/" target="_blank">Forensic Focus - Resources</a>
+        <a href="https://study.com/academy/lesson/digital-forensics-tools-resources.html" target="_blank">Study.com - Tools & Resources</a>
+        <a href="https://www.techrepublic.com/article/digital-forensics-the-smart-persons-guide/" target="_blank">Tech Republic - Smart Person's Guide</a>
+        <a href="https://www.forensicscolleges.com/blog/resources/guide-digital-forensics-tools" target="_blank">Forensics Colleges - Guide to Digital Forensics Tools</a>
+        <a href="https://resources.infosecinstitute.com/topics/digital-forensics/free-open-source-computer-forensics-tools/" target="_blank">Infosec Institute - Free & Open Source Tools</a>
+        <a href="https://www.open.edu/openlearn/science-maths-technology/digital-forensics/content-section-0?active-tab=description-tab" target="_blank">Open.edu - Digital Forensics</a>
+        <a href="https://www.businessnewsdaily.com/10755-best-digital-forensics-certifications.html" target="_blank">Business News Daily - Best Digital Forensics Certifications</a>
+        <a href="https://www.kroll.com/en/services/cyber-risk/incident-response-litigation-support/kroll-artifact-parser-extractor-kape" target="_blank">Kroll - Artifact Parser & Extractor (KAPE)</a>
+        <a href="https://book.hacktricks.xyz/generic-methodologies-and-resources/basic-forensic-methodology/memory-dump-analysis/volatility-cheatsheet" target="_blank">HackTricks - Volatility Cheatsheet</a>
+        <a href="https://medium.com/@zemelusa/first-steps-to-volatile-memory-analysis-dcbd4d2d56a1" target="_blank">Medium - First Steps to Volatile Memory Analysis</a>
+        <a href="https://github.com/volatilityfoundation/volatility/wiki/Memory-Samples" target="_blank">GitHub - Volatility Memory Samples</a>
+        <a href="https://blog.onfvp.com/post/volatility-cheatsheet/" target="_blank">Onfvp Blog - Volatility Cheatsheet</a>
+        <a href="https://www.osforensics.com/tools/volatility-workbench.html" target="_blank">OSForensics - Volatility Workbench</a>
+        <a href="https://start.me/p/q6mw4Q/forensics" target="_blank">Start.me - Forensics</a>
+        
+      </div>
+    </div>
+  </main>
+
+  <button id="return-button" onclick="window.location.href='index.html'">Return to Main Page</button>
+
 </body>
 </html>

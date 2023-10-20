@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notepad</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div id="header-content">
+      <img src="doggo.png" alt="Profile Picture" id="profile-pic">
+      <h1>Notepad</h1>
+    </div>
+  </header>
+
+  <main>
+    <div id="toolbar">
+      <!-- ... existing buttons ... -->
+      <button onclick="saveText()">Save</button>
+    </div>
+    <textarea id="notepad"></textarea>
+  </main>
+
+  <button id="return-button" onclick="window.location.href='index.html'">Return to Main Page</button>
+
+  <script src="notepad.js"></script>
+
+</body>
+</html>
