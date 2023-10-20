@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Browser Notepad</title>
+    <!-- RGF2ZXkgU3ByZW5nZXI= -->
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
         }
-        #toolbar {
-            margin-bottom: 10px;
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+        #toolbar, header {
+            display: flex;
+            justify-content: space-between;
+        }
+        #profile-pic {
+            border-radius: 50%;
+            height: 40px;
         }
         button {
             margin: 5px;
@@ -23,7 +35,11 @@
     </style>
 </head>
 <body>
-    <h1>Browser Notepad</h1>
+    <header>
+        <img id="profile-pic" src="doggo.png" alt="Profile Picture">
+        <h1>Browser Notepad</h1>
+        <a href="index.html">Return</a>
+    </header>
 
     <div id="toolbar">
         <button onclick="applyStyle('bold')">Bold</button>
@@ -34,6 +50,7 @@
             <option value="20">20</option>
             <option value="24">24</option>
         </select>
+        <button onclick="saveTextAsFile()">Save</button>
     </div>
 
     <div id="editor" contenteditable="true">
@@ -50,6 +67,19 @@
                 const size = document.getElementById("fontSize").value;
                 document.execCommand('fontSize', false, size/12);
             }
+        }
+
+        function saveTextAsFile() {
+            let textToSave = document.getElementById("editor").innerHTML;
+            let textToSaveAsBlob = new Blob([textToSave], {type: "text/plain"});
+            let textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
+            let fileNameToSaveAs = "your-file.txt";
+            
+            let downloadLink = document.createElement("a");
+            downloadLink.download = fileNameToSaveAs;
+            downloadLink.innerHTML = "Download File";
+            downloadLink.href = textToSaveAsURL;
+            downloadLink.click();
         }
     </script>
 </body>
