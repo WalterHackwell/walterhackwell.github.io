@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Informational Links</title>
+    <title>Davey Sprenger's Start Page</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #f0f0f0, #e6e6e6);
+            background: linear-gradient(to right, #f3f3f3, #e6e6e6);
         }
         header {
-            background: linear-gradient(to bottom, #333, #555);
+            background: linear-gradient(to bottom, #333, #444);
             color: white;
             padding: 1em;
             text-align: center;
@@ -23,6 +23,7 @@
             left: 15px;
             width: 50px;
             height: 50px;
+            border-radius: 50%;
         }
         header h1 {
             margin: 0;
@@ -32,8 +33,11 @@
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
         }
         .info-box {
+            flex: 1;
             background-color: #fff;
             padding: 20px;
             margin: 10px;
@@ -65,17 +69,24 @@
 <body>
     <header>
         <img src="doggo.png" alt="Davey Sprenger">
-        <h1>My Informational Links</h1>
+        <h1>Davey Sprenger's Start Page</h1>
     </header>
     <div class="container">
         <div class="return-button">
             <a href="index.html">Return to Main Page</a>
         </div>
-        <div class="info-box" id="guide1">
-            <h2>Programming Guides</h2>
+        <div class="info-box" id="programming">
+            <h2>Programming</h2>
             <ul>
-                <li><a href="https://example.com">Link 1</a></li>
-                <li><a href="https://example.com">Link 2</a></li>
+                <li><a href="https://example.com">Resource 1</a></li>
+                <li><a href="https://example.com">Resource 2</a></li>
+            </ul>
+        </div>
+        <div class="info-box" id="security">
+            <h2>Security</h2>
+            <ul>
+                <li><a href="https://example.com">Resource 1</a></li>
+                <li><a href="https://example.com">Resource 2</a></li>
             </ul>
         </div>
         <!-- Add more info-boxes as needed -->
