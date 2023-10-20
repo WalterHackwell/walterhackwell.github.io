@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Browser Notepad</title>
-    <!-- RGF2ZXkgU3ByZW5nZXI= -->
+    <!-- Davey Sprenger - Encrypted in Base64 as RGF2ZXkgU3ByZW5nZXI= -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,17 +14,28 @@
             color: white;
             padding: 1em;
             text-align: center;
-        }
-        #toolbar, header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+        }
+        header a {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border-radius: 4px;
+            text-decoration: none;
         }
         #profile-pic {
             border-radius: 50%;
             height: 40px;
         }
+        #toolbar {
+            display: flex;
+            justify-content: flex-start;
+            gap: 5px;
+        }
         button {
-            margin: 5px;
+            padding: 5px 10px;
         }
         #editor {
             width: 100%;
@@ -42,43 +53,35 @@
     </header>
 
     <div id="toolbar">
-        <button onclick="applyStyle('bold')">Bold</button>
-        <button onclick="applyStyle('italic')">Italic</button>
-        <select id="fontSize" onchange="applyStyle('fontsize')">
-            <option value="12">12</option>
-            <option value="16">16</option>
-            <option value="20">20</option>
-            <option value="24">24</option>
+        <button onclick="document.execCommand('bold')">Bold</button>
+        <button onclick="document.execCommand('italic')">Italic</button>
+        <select id="fontSize" onchange="document.execCommand('fontSize', false, this.value)">
+            <option value="1">8pt</option>
+            <option value="2">10pt</option>
+            <option value="3">12pt</option>
+            <option value="4">14pt</option>
+            <option value="5">18pt</option>
+            <option value="6">24pt</option>
+            <option value="7">36pt</option>
         </select>
         <button onclick="saveTextAsFile()">Save</button>
     </div>
 
-    <div id="editor" contenteditable="true">
-        <!-- This is where you'll type your notes. -->
-    </div>
+    <div id="editor" contenteditable="true"></div>
 
     <script>
-        function applyStyle(style) {
-            if (style === 'bold') {
-                document.execCommand('bold', false, null);
-            } else if (style === 'italic') {
-                document.execCommand('italic', false, null);
-            } else if (style === 'fontsize') {
-                const size = document.getElementById("fontSize").value;
-                document.execCommand('fontSize', false, size/12);
-            }
-        }
-
         function saveTextAsFile() {
-            let textToSave = document.getElementById("editor").innerHTML;
-            let textToSaveAsBlob = new Blob([textToSave], {type: "text/plain"});
+            let textToSave = document.getElementById('editor').innerHTML;
+            let textToSaveAsBlob = new Blob([textToSave], { type: "text/plain" });
             let textToSaveAsURL = window.URL.createObjectURL(textToSaveAsBlob);
-            let fileNameToSaveAs = "your-file.txt";
-            
+            let fileNameToSaveAs = "my_new_file.txt";
+
             let downloadLink = document.createElement("a");
             downloadLink.download = fileNameToSaveAs;
             downloadLink.innerHTML = "Download File";
             downloadLink.href = textToSaveAsURL;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
             downloadLink.click();
         }
     </script>
