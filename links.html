@@ -4,99 +4,86 @@
     <meta charset="UTF-8">
     <title>Informational Links</title>
     <style>
+        /* General styling */
+        body, h1, h2, a {
+            font-family: Arial, sans-serif;
+        }
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #f3f3f3, #e6e6e6);
+            background-color: #f0f0f0;
         }
         header {
-            background: linear-gradient(to bottom, #333, #444);
+            background-color: #333;
             color: white;
             padding: 1em;
             text-align: center;
-            position: relative;
         }
-        header img {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-        header h1 {
-            margin: 0;
-            padding: 0;
-        }
+        /* Container */
         .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
             display: flex;
             flex-wrap: wrap;
-        }
-        .info-box {
-            flex: 1;
-            background-color: #fff;
+            justify-content: space-between;
             padding: 20px;
+        }
+        /* Link sections */
+        .link-section {
+            flex: 1;
             margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: white;
         }
-        .info-box h2 {
-            font-size: 1.5em;
-            color: #333;
-        }
-        .info-box ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .info-box ul li {
-            padding: 10px 0;
-            font-size: 1.1em;
-        }
-        .return-button a {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+        /* Styled links */
+        .styled-link {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
             text-decoration: none;
-            margin: 20px;
+            color: black;
+        }
+        /* Profile picture */
+        #profile-picture {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+        }
+        /* Return button */
+        .btn.return {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="doggo.png" alt="Davey Sprenger">
-        <h1>Informational Links</h1>
+        <img src="doggo.png" alt="Davey Sprenger" id="profile-picture">
+        <h1>Info links Links</h1>
     </header>
     <div class="container">
-        <div class="return-button">
-            <a href="index.html">Return to Main Page</a>
+        <div class="link-section" id="general">
+            <h2>General</h2>
+            <!-- Add your general links here -->
         </div>
-        <div class="info-box" id="programming">
-            <h2>Programming</h2>
-            <ul>
-                <li><a href="https://example.com">Resource 1</a></li>
-                <li><a href="https://example.com">Resource 2</a></li>
-            </ul>
-        </div>
-        <div class="info-box" id="security">
-            <h2>Security</h2>
-            <ul>
-                <li><a href="https://example.com">Resource 1</a></li>
-                <li><a href="https://example.com">Resource 2</a></li>
-            </ul>
-        </div>
-        <!-- Add more info-boxes as needed -->
-        <div class="info-box" id="DFIR">
-            <h2>Getting started in DFIR</h2>
-            <ul>
-                <li><a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt4bdf4bdc6698936a/N2C_Field_Manual.pdf">NEW TO CYBER FIELD MANUAL</a></li>
-                <li><a href="https://example.com">Resource 2</a></li>
-            </ul>
+        <div class="link-section" id="DFIR">
+            <h2>DFIR</h2>
+            <a href="https://assets.contentstack.io/v3/assets/blt36c2e63521272fdc/blt4bdf4bdc6698936a/N2C_Field_Manual.pdf" class="styled-link">N2C Field Manual</a>
+            <a href="https://twitter.com/search?q=%23DFIRJobs" class="styled-link">#DFIRJobs on Twitter</a>
+            <a href="https://www.youtube.com/playlist?list=PLfouvuAjspTqyfrgYO76VOwvVqK1AsMwK" class="styled-link">DFIR YouTube Playlist</a>
+            <a href="https://www.13cubed.com/episodes/" class="styled-link">13Cubed Episodes</a>
+            <a href="https://cci.calpoly.edu/2019-digital-forensics-downloads" class="styled-link">CalPoly DFIR Downloads</a>
+            <a href="https://academy.cyber5w.com/" class="styled-link">Cyber5W Academy</a>
+            <a href="https://www.sans.org/cyberaces/" class="styled-link">SANS Cyber Aces</a>
+            <a href="https://www.youtube.com/playlist?list=PLJu2iQtpGvv-2LtysuTTka7dHt9GKUbxD" class="styled-link">DFIR YouTube Playlist 2</a>
         </div>
     </div>
+    <a href="index.html" class="btn return">Return to Main Page</a>
 </body>
 </html>
